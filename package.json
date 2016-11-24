@@ -8,5 +8,13 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "re-base": "^2.3.2",
+    "react": "^15.4.1",
+    "semantic-ui-react": "^0.61.4"
+  },
+  "devDependencies": {
+    "semantic-ui": "^2.2.6"
+  }
 }
