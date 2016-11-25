@@ -4,7 +4,7 @@ export default class Menu extends Component {
   render() {
     return (
       <div>
-        react app
+        this is my menu
       </div>
     );
   }

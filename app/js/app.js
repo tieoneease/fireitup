@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Menu from './components/Global/Menu.jsx';
+import Menu from './components/Menu';
 
 ReactDOM.render(
   <Menu />,
