@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Menu from './components/Menu';
+import Menu from 'components/menu';
+import Routes from 'config/routes';
 
 ReactDOM.render(
-  <Menu />,
+  <Routes />,
   document.getElementById('app')
 );

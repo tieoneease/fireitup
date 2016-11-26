@@ -17,6 +17,9 @@ module.exports = {
     extensions: ['', '.js', '.jsx', '.json'],
     root: path.resolve(__dirname, './app/js'),
   },
+
+  devtool: 'eval-source-map',
+
   module: {
     loaders: [
       {
