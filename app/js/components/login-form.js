@@ -4,22 +4,29 @@ import { Button, Form, Input, Message, Segment, Divider } from 'semantic-ui-reac
 import { withRouter } from 'react-router';
 import base from 'config/base'
 
-const authHandler = (error, user) => {
-  if (error) console.log('errored: ' ,error)
-  else console.log('logged in', user.providerData)
-}
 
-const login = (serializedForm) => base.authWithPassword(serializedForm, authHandler);
 
 
 class LoginForm extends Component {
+  static contextTypes = { router: React.PropTypes.object }
+
   state = { serializedForm: {} }
   handleChange = (e, { value }) => this.setState({ value })
+
+  authHandler = (error, user) => {
+    if (error) console.log('errored: ' ,error)
+    else console.log('logged in', user.providerData)
+    this.context.router.push('/feed')
+  }
+
+  login = (serializedForm) => base.authWithPassword(serializedForm, this.authHandler);
+
   handleLogin = (e, serializedForm) => {
     e.preventDefault()
     this.setState({ serializedForm })
-    login(serializedForm)
+    this.login(serializedForm)
   }
+
   render() {
     const { serializedForm, value } = this.state
     return (
