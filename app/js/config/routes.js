@@ -1,15 +1,17 @@
 import React from 'react';
-import { Router, Route, hashHistory } from 'react-router'
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import AppContainer from 'containers/app-container'
-import Menu from 'components/menu'
+import LoginContainer from 'containers/login-container'
 
 const Routes = (props) => {
   return (
-    <Router history={hashHistory}>
+    <Router history={browserHistory}>
       <Route path="/" component={AppContainer}>
+        <IndexRoute component={LoginContainer} />
       </Route>
     </Router>
   )
 }
+//        <IndexRoute component={Home} />
 
 export default Routes;

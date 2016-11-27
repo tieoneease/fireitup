@@ -15,7 +15,10 @@ module.exports = {
 
   resolve: {
     extensions: ['', '.js', '.jsx', '.json'],
-    root: path.resolve(__dirname, './app/js'),
+    root: [
+      path.resolve(__dirname, './app/js'),
+      path.resolve(__dirname, './')
+    ]
   },
 
   devtool: 'eval-source-map',

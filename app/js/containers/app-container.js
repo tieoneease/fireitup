@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Container } from 'semantic-ui-react'
-import Login from 'components/login'
+import { withRouter } from 'react-router';
 
-const AppContainer = () => (
-  <Container>
-  </Container>
-)
+import Nav from 'components/nav'
+import LoginContainer from 'containers/login-container'
 
-export default AppContainer
+class AppContainer extends Component {
+  render() {
+    return (
+      <Container>
+        <Nav />
+        {this.props.children}
+      </Container>
+    )
+  }
+}
+
+export default withRouter(AppContainer)
