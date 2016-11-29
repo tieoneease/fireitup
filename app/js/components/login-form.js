@@ -14,9 +14,8 @@ class LoginForm extends Component {
   handleChange = (e, { value }) => this.setState({ value })
 
   authHandler = (error, user) => {
-    if (error) console.log('errored: ' ,error)
-    else console.log('logged in', user.providerData)
-    this.context.router.push('/feed')
+    if (error) console.log('errored: ' ,error.message)
+    else this.context.router.push('/feed')
   }
 
   login = (serializedForm) => base.authWithPassword(serializedForm, this.authHandler);
