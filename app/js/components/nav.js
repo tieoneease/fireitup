@@ -21,10 +21,10 @@ class Nav extends Component {
 
     return (
       <Segment inverted>
-        <Menu inverted fluid secondary >
-          <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} />
-          <Menu.Item name='connections' active={activeItem === 'connections'} onClick={this.handleItemClick} />
-          <Menu.Item name='friends' active={activeItem === 'friends'} onClick={this.handleItemClick} />
+        <Menu inverted fluid secondary>
+          <Menu.Item color='yellow' name='home' active={activeItem === 'home'} onClick={this.handleItemClick} />
+          <Menu.Item color='yellow' name='connections' active={activeItem === 'connections'} onClick={this.handleItemClick} />
+          <Menu.Item color='yellow' name='friends' active={activeItem === 'friends'} onClick={this.handleItemClick} />
           <Menu.Menu position='right'>
             <Menu.Item name='logout' active={activeItem === 'logout'} onClick={this.handleItemClick} />
           </Menu.Menu>

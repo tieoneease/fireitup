@@ -5,7 +5,7 @@ import { withRouter } from 'react-router';
 import base from 'config/base'
 
 
-class LoginForm extends Component {
+class SignUpForm extends Component {
   static contextTypes = { router: React.PropTypes.object }
 
   state = { serializedForm: {} }
@@ -18,7 +18,7 @@ class LoginForm extends Component {
 
   login = (serializedForm) => base.authWithPassword(serializedForm, this.authHandler);
 
-  handleLogin = (e, serializedForm) => {
+  handleSignUp = (e, serializedForm) => {
     e.preventDefault()
     this.setState({ serializedForm })
     this.login(serializedForm)
@@ -27,11 +27,11 @@ class LoginForm extends Component {
   render() {
     const { serializedForm, value } = this.state
     return (
-      <Form onSubmit={this.handleLogin}>
+      <Form onSubmit={this.handleSignUp}>
         <Form.Input label='Email' name='email' type='email' />
         <Form.Input label='Password' name='password' type='password' />
         <Segment padded>
-          <Button fluid color='yellow' type='submit' value='submit'>Login</Button>
+          <Button fluid color='yellow' type='submit' value='submit'>SignUp</Button>
           <Divider horizontal>Or</Divider>
           <Button fluid secondary onClick={(e)=>{this.context.router.push('/signup')}}>Sign Up</Button>
         </Segment>
@@ -43,4 +43,4 @@ class LoginForm extends Component {
   }
 }
 
-export default withRouter(LoginForm)
+export default withRouter(SignUpForm)
