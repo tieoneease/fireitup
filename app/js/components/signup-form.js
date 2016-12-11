@@ -35,6 +35,7 @@ class SignUpForm extends Component {
           <Divider horizontal>Or</Divider>
           <Button fluid secondary onClick={(e)=>{this.context.router.push('/signup')}}>Sign Up</Button>
         </Segment>
+
         <Message>
           <pre>serializedForm: {JSON.stringify(serializedForm, null, 2)}</pre>
         </Message>
