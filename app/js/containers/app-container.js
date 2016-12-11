@@ -10,7 +10,7 @@ class AppContainer extends Component {
     return (
       <Container>
         <Nav />
-        {this.props.children}
+        { this.props.children }
       </Container>
     )
   }
