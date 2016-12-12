@@ -4,7 +4,9 @@ import { Container, Segment } from 'semantic-ui-react'
 const FeedContainer = () => (
   <Container text>
     <Segment padded raised color='yellow'>
-      this is the feed
+      this girl is on fire
+      this is still the feed
+      <p>fuck yeahhh bruh</p>
     </Segment>
   </Container>
 )
